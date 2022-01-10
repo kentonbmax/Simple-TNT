@@ -1,23 +1,19 @@
-import { stringify } from "querystring";
-
-const os = require('os');
+import * as OS from 'os';
 
 export interface IOSdata {
     type: string;
-    cpuSpeed: number;
-    cpuModel: string;
+    cpuInfos: OS.CpuInfo[];
     hostName: string;
     totalMemory: number;
 
 }
 export function getOSData(): IOSdata  {
-    const cpuDat = os.cpus();
-    return {
-        type: os.type(),
-        cpuSpeed: cpuDat.speed,
-        cpuModel: cpuDat.model,
-        hostName: os.hostname(),
-        totalMemory: os.totalmem()
-
+    const data = {
+        type: OS.type(),
+        cpuInfos: OS.cpus(),
+        hostName: OS.hostname(),
+        totalMemory: OS.totalmem()
     }
+
+    return data;
 }
