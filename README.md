@@ -13,10 +13,10 @@ Caution!!
 Gitignore does not include .js files. 
 
 Setup:
-1. Run npm install typescript -g
-2. Run npm install
-3. Run tsc -w
-4. Add your own amazing content or proof of concepts!!
+> Requires current LTS version of nodejs. 
+1. Run `npm install`
+1. Run `npm start`
+1. Add your own amazing content or proof of concepts!!
 
 
 TODO:
