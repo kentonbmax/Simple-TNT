@@ -1,3 +1,4 @@
+// the os module has lots of good info about your host operating system.
 import * as OS from 'os';
 
 export interface IOSdata {
